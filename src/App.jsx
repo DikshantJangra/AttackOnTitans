@@ -1,12 +1,10 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Landing from './components/Landing'
+import AttackLanding from './components/AttackLanding'
 
 const App = () => {
   return (
-    <div className='relative h-screen w-full'>
-      {/* <Navbar /> */}
-      <Landing />
+    <div className='h-screen w-full'>
+      <AttackLanding />
     </div>
   )
 }
