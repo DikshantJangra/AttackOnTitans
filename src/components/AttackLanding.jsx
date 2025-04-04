@@ -15,7 +15,7 @@ const AttackLanding = () => {
             <p className='text-white font-extralight sm:font-light sm:text-[1.2vmax] px-9 sm:px-0 sm:w-130'>The world is surrounded by giant walls. Inside these walls, humanity survives, but the Titans loom ever larger.
             Eren Yeager, driven by the desire for freedom, is on a mission to break the chains of humanity’s greatest enemy—the Titans.</p>
 
-            <button className='uppercase font-medium cursor-pointer hover:bg-[#252525] hover:text-white px-4 py-3 bg-[#313131] text-sm rounded-2xl text-zinc-400 mt-4 transition-all'>Join the fight</button>
+            <button className='uppercase font-medium cursor-pointer hover:bg-[#252525] hover:text-white px-4 py-3 bg-[#313131] text-sm rounded-2xl text-zinc-400 mt-4 transition-all duration-300'>Join the fight</button>
         </div>
     </div>
   </>
