@@ -6,7 +6,6 @@ import LoadingAttack from './components/LoadingAttack'
 const App = () => {
   return (
     <div className='h-screen w-full'>
-      <LoadingAttack />
       <AttackLanding />
       <AttackLanding2 />
     </div>
