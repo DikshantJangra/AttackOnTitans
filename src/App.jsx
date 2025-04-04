@@ -4,8 +4,8 @@ import Landing from './components/Landing'
 
 const App = () => {
   return (
-    <div className='h-screen w-full'>
-      <Navbar />
+    <div className='relative h-screen w-full'>
+      {/* <Navbar /> */}
       <Landing />
     </div>
   )
