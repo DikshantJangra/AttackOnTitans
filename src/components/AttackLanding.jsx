@@ -3,10 +3,10 @@ import React from 'react'
 const AttackLanding = () => {
   return (
   <>
-    <div className='h-screen w-full bg-[url(./src/assets/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
+    <div className='h-screen w-full bg-[url(./public/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
         <div className='Navbar font-black text-white flex justify-center items-center text-[5vmax] py-3'>
             <h1 className='uppercase'>Attack</h1>
-            <img className='h-[8vmax] px-2' src="./src/assets/ScoutRegiment.png" alt="ScoutRegiment" />
+            <img className='h-[8vmax] px-2' src="./public/ScoutRegiment.png" alt="ScoutRegiment" />
             <h1 className='uppercase'>Titan</h1>
         </div>
 
