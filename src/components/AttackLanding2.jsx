@@ -2,18 +2,18 @@ import React from 'react'
 
 const AttackLanding2 = () => {
   const images = [
-    {imgLink: './src/assets/silver_wallSina.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallRose.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/silver_wallMaria.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallSina.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/silver_wallRose.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallMaria.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/silver_wallSina.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallRose.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/silver_wallMaria.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallSina.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/silver_wallRose.png', alt:'Wall Sina'},
-    {imgLink: './src/assets/black_wallMaria.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallSina.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallRose.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallMaria.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallSina.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallRose.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallMaria.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallSina.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallRose.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallMaria.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallSina.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/silver_wallRose.png', alt:'Wall Sina'},
+    {imgLink: '/src/assets/black_wallMaria.png', alt:'Wall Sina'},
 
   ]
   return (
@@ -31,7 +31,7 @@ const AttackLanding2 = () => {
           <div className='flex justify-between items-center'>
           <img
             className='h-[45vmax] hidden sm:block'
-            src="src/assets/foundingTitan6.png" 
+            src="/src/assets/foundingTitan6.png" 
             alt="Founding Titan 6"
            />
            <p className='flex justify-center w-screen pt-40 sm:pt-0 text-center text-white font-bold text-[5vmax] tracking-tighter leading-none '>THE WALLS <br />
@@ -39,7 +39,7 @@ const AttackLanding2 = () => {
             HUMAITY</p>
            <img
             className='h-[45vmax] hidden sm:block'
-            src="src/assets/foundingTitan9.png" 
+            src="/src/assets/foundingTitan9.png" 
             alt="Founding Titan 9"
            />
           </div>
