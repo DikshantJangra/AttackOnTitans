@@ -5,6 +5,7 @@ import LoadingAttack from './components/LoadingAttack'
 import LocomotiveScroll from 'locomotive-scroll'; // Not initialized yet
 import CharactersAttack from './components/CharactersAttack';
 import Episodes from './components/Episodes';
+import Footer from './components/Footer';
 
 const App = () => {
   const scroll = new LocomotiveScroll(); // Not initialized yet
@@ -14,6 +15,7 @@ const App = () => {
       <AttackLanding2 />
       {/* <CharactersAttack /> */}
       <Episodes />
+      <Footer />
     </div>
   )
 }
