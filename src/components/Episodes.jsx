@@ -1,7 +1,6 @@
-import { MdKeyboardArrowRight, MdArrowRightAlt } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdArrowRightAlt } from "react-icons/md";
 
-
-import React, { useEffect } from 'react'
 
 const Episodes = () => {
     // const fetchData = async()=>{

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   build: {
     rollupOptions: {
-      external: ['react-icons/md'] // Add react-icons to external array
+      external: ['react-icons/md']
     }
   }
 })
