@@ -1,5 +1,5 @@
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { MdArrowRightAlt } from "react-icons/md";
+// import { MdKeyboardArrowRight } from "react-icons/md";
+// import { MdArrowRightAlt } from "react-icons/md";
 
 
 const Episodes = () => {
@@ -40,13 +40,13 @@ const Episodes = () => {
                             <p className='text-xl font-extralight'>{episode.title}</p>
                         </div>
                     </div>
-                    <span className="text-8xl"><MdKeyboardArrowRight /></span>
+                    {/* <span className="text-8xl"><MdKeyboardArrowRight /></span> */}
                 </div>
             ))}
         </div>
         <div className='flex justify-center items-center text-white font-bold text-2xl'>
             <a className="uppercase">View All</a>
-            <MdArrowRightAlt />
+            {/* <MdArrowRightAlt /> */}
         </div>
     </div>
   )
