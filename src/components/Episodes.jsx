@@ -12,10 +12,10 @@ const Episodes = () => {
     //     fetchData()
     // })
     const episodesData = [
-        {img:'./src/assets/ep1Img.png', ep:'S01 | EP01', title:'To You, in 2000 Years: The Fall of Shiganshina, Part 1'},
-        {img:'./src/assets/ep2Img.png', ep:'S01 | EP02', title:'That Day - The Fall of Shiganshina: Part 2'},
-        {img:'./src/assets/ep3Img.png', ep:'S01 | EP03', title:'A Dim Light Amid Despair - Humanitys Comeback: P1'},
-        {img:'./src/assets/ep4Img.png', ep:'S01 | EP04', title:'The Night of the Closing Ceremony: Humanitys..........'},
+        {img:'/ep1Img.png', ep:'S01 | EP01', title:'To You, in 2000 Years: The Fall of Shiganshina, Part 1'},
+        {img:'/ep2Img.png', ep:'S01 | EP02', title:'That Day - The Fall of Shiganshina: Part 2'},
+        {img:'/ep3Img.png', ep:'S01 | EP03', title:'A Dim Light Amid Despair - Humanitys Comeback: P1'},
+        {img:'/ep4Img.png', ep:'S01 | EP04', title:'The Night of the Closing Ceremony: Humanitys..........'},
     ]
     return (
     <div className='h-screen py-10'> {/* Parent Div */}
