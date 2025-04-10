@@ -4,14 +4,16 @@ import AttackLanding2 from './components/AttackLanding2'
 import LoadingAttack from './components/LoadingAttack'
 import LocomotiveScroll from 'locomotive-scroll'; // Not initialized yet
 import CharactersAttack from './components/CharactersAttack';
+import Episodes from './components/Episodes';
 
 const App = () => {
   const scroll = new LocomotiveScroll(); // Not initialized yet
   return (
-    <div className='h-screen w-full'>
+    <div className=' w-full bg-gradient-to-b from-[#AF502C] to-[#A90003]'>
       <AttackLanding />
       <AttackLanding2 />
-      <CharactersAttack />
+      {/* <CharactersAttack /> */}
+      <Episodes />
     </div>
   )
 }

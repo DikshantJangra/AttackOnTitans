@@ -18,7 +18,7 @@ const AttackLanding2 = () => {
   ]
   return (
     <>
-        <div className='h-screen w-full bg-gradient-to-b from-[#6B1717] to-[#CB6734]'>
+        <div className='h-screen w-full '>
           <div className='whitespace-nowrap overflow-hidden'>
             {images.map((img, idx)=>(
               <img  key={idx}
