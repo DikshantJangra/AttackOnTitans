@@ -13,7 +13,7 @@ const App = () => {
     <div className=' w-full bg-gradient-to-b from-[#AF502C] to-[#A90003]'>
       <AttackLanding />
       <AttackLanding2 />
-      {/* <CharactersAttack /> */}
+      <CharactersAttack />
       <Episodes />
       <Footer />
     </div>
