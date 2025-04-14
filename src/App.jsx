@@ -10,6 +10,18 @@ import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
 
+export const Home = ()=>{
+  return(
+    <div className=' w-full bg-gradient-to-b from-[#AF502C] to-[#A90003]'>
+      <AttackLanding />
+      <AttackLanding2 />
+      <CharactersAttack />
+      <Episodes />
+      <Footer />
+    </div>
+  )
+}
+
 const App = () => {
   
   const locomotiveScroll = new LocomotiveScroll();

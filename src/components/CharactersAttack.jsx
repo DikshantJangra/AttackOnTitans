@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 const CharactersAttack = () => {
     const eyes1 = useRef(null)
@@ -237,7 +238,7 @@ const CharactersAttack = () => {
             {/* View All Characters section! */}
             <div className="w-full mt-20 h-[300px] bg-zinc-200 bg-[url('/ErenViewMore.png')] bg-cover bg-center text-white 
     flex items-center justify-center text-3xl font-bold transform -skew-y-7 origin-top-left">
-  <p ref={viewAll}>View All Characters</p>
+  <Link to={'/AllCharacters'} ref={viewAll}>View All Characters</Link>
 </div>
 
         </div>

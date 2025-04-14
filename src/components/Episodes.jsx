@@ -3,17 +3,11 @@
 
 import gsap from "gsap"
 import React, { useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 
 
 const Episodes = () => {
-    // const fetchData = async()=>{
-    //     const resp = await fetch('https://api.attackontitanapi.com/episodes/')
-    //     const result = await resp.json()
-    //     console.log(result.results[0])
-    // }
-    // useEffect(()=>{
-    //     fetchData()
-    // })
+
     const episodesData = [
         {img:'/ep1Img.png', ep:'S01 | EP01', title:'To You, in 2000 Years: The Fall of Shiganshina, Part 1'},
         {img:'/ep2Img.png', ep:'S01 | EP02', title:'That Day - The Fall of Shiganshina: Part 2'},
@@ -100,7 +94,7 @@ const Episodes = () => {
             ))}
         </div>
         <div ref={viewAll} className='flex justify-center items-center text-white font-bold text-2xl'>
-            <a className="uppercase">View All</a>
+            <Link to={'/AllEpisodes'} className="uppercase">View All</Link>
             {/* <MdArrowRightAlt /> */}
         </div>
     </div>
