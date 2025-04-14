@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const AttackLanding = () => {
   const attackRef = useRef(null)
@@ -9,6 +9,21 @@ const AttackLanding = () => {
   const contentRef2 = useRef(null)
   const contentRef3 = useRef(null)
   const btnRef = useRef(null)
+  const audioRef = useRef(null)
+
+  const [isPlaying, setIsPlaying] = useState(false)
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        audioRef.current.play().catch(err => console.warn("Play failed:", err))
+        setIsPlaying(true)
+      }
+    }
+  }
+
   useEffect(()=>{
     const tl = gsap.timeline()
     tl.fromTo(
@@ -50,10 +65,13 @@ const AttackLanding = () => {
         {x:0, opacity:1, duration:0.1, ease:"power1.inOut"}
       )
     })
+
   },[])
+
   return (
   <>
-    <div data-scroll data-scroll-speed='-0.05' className='min-h-screen w-full bg-[url(/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
+    <div data-scroll data-scroll-speed='-0.05' className='min-h-screen relative w-full bg-[url(/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
+        <audio ref={audioRef}  src="/aotMusic.mp3" loop />
         <div className='Navbar font-black text-white flex justify-center items-center text-[5vmax] py-3'>
             <div className='overflow-hidden'>
               <h1 ref={attackRef} className='uppercase opacity-0 animate-from'>Attack</h1>
@@ -65,6 +83,15 @@ const AttackLanding = () => {
               <h1 ref={titanRef} className='uppercase opacity-0'>Titan</h1>
             </div>
         </div>
+        <div className='absolute right-10 top-15'>
+            <button
+              onClick={toggleAudio}
+              className='bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-all duration-300'
+            >
+              {isPlaying ? 'Pause Music' : 'Play Music'}
+            </button>
+          </div>
+        
 
         <div className='text-center sm:text-left tracking-tighter pt-22 sm:px-10 overflow-hidden'>
             <h2 ref={contentRef1} className='text-black sm:text-[#481D27] font-black text-[4vmax] opacity-0'>FIGHT THE TITANS</h2>
