@@ -14,7 +14,7 @@ const AttackLanding = () => {
     tl.fromTo(
       scoutRegRef.current,
       {opacity:0},
-      {opacity:1, duration:.5, ease:"power1.inOut"}
+      {opacity:1, duration:.5, ease:"power1.inOut", delay:5}
     )
     .add(()=>{
         gsap.fromTo(

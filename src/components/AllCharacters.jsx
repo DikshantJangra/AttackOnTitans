@@ -6,6 +6,14 @@ const AllCharacters = () => {
     const [charData, setcharData] = useState([])
     const [loading, setLoading] = useState(false)
     const [selectedPage, setselectedPage] = useState('1');
+    const charsImg = [
+        'https://staticg.sportskeeda.com/editor/2022/03/85f50-16473663883692-1920.jpg',
+        'https://cdn.staticneo.com/w/attackontitan/MikasaAckerman.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgPPCqeBFPrltCHM1iObQPQbDpn1duXu3buw&s',
+        'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/03/connie-looking-at-titan.jpg',
+        'https://i.pinimg.com/736x/3a/37/50/3a37503f0ced98a450811d3b6cd6ad57.jpg',
+    ]
+    
      const fetchData = async()=>{
         try{
             setLoading(true)
@@ -73,7 +81,7 @@ const AllCharacters = () => {
             {charData.map((char, idx)=>(
                 <div className='flex sm:flex-row flex-col items-center gap-10 my-4 px-10 py-4 rounded-2xl bg-white/10 text-white' key={idx}>
                     <div className='bg-white w-[25vmax] sm:w-[16vmax] h-[15vmax] sm:h-[10vmax] rounded-2xl'>
-                        <img className='rounded-2xl' src='' alt="" />
+                        <img className='rounded-2xl h-full w-full object-cover object-center' src={charsImg[idx] || '/ErenLastEye2.png'} alt="AOT Character" />
                     </div>
 
                     <div className='text-left'>
