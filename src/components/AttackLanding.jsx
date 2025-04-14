@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
+import { MdMusicOff, MdMusicNote } from "react-icons/md";
 
 const AttackLanding = () => {
   const attackRef = useRef(null)
@@ -86,9 +87,9 @@ const AttackLanding = () => {
         <div className='absolute right-10 top-15'>
             <button
               onClick={toggleAudio}
-              className='bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition-all duration-300'
+              className='text-white px-4 py-2 rounded-md text-4xl animate-pulse hover:scale-130 cursor-pointer transition-all duration-300'
             >
-              {isPlaying ? 'Pause Music' : 'Play Music'}
+              {isPlaying ? <MdMusicNote /> : <MdMusicOff />}
             </button>
           </div>
         
