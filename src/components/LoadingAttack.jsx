@@ -16,7 +16,7 @@ const LoadingAttack = ({exit}) => {
   
   useEffect(() => {
     let start = 0;
-    const end = 100;
+    const end = 101;
 
     const animate = ()=>{
       const increment = (end -start)/(2000/16)
@@ -56,9 +56,9 @@ const LoadingAttack = ({exit}) => {
         src="/loading2.mp4"
       >
       </video>
-        <p className='absolute text-[#6b1717] font-black text-[8vmax] bottom-10 right-10'>{count}</p>
         <p className='absolute w-full text-white top-1/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-black text-[5vmax] leading-none text-center uppercase'>Attack on Titan</p>
         <i className='absolute w-full text-white top-1/3 pb-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[1.2vmax] font-extralight animate-pulse transition-opacity text-center'>{currentTagline}</i>
+        <p className='absolute text-[#6b1717] font-black text-[8vmax] bottom-10 right-10'>{count}%</p>
     </div>
   )
 }

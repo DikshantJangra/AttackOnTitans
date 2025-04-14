@@ -18,7 +18,7 @@ const App = () => {
     },5000)
     const fade = setTimeout(()=>{
       setisExiting(true);
-    },4500)
+    },4600)
     
     return ()=>{
       clearTimeout(load)
