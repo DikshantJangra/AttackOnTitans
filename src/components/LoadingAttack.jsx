@@ -1,51 +1,65 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const LoadingAttack = () => {
+const LoadingAttack = ({exit}) => {
+  const [count, setCount] = useState(0);
+  const taglines = [
+    "When humanity is cornered, monsters are born.  ~ AOT",
+    "The world is cruel. And also… beautiful.  ~ Mikasa Ackerman",
+    "What does it mean to be free?  ~ Eren Yeager",
+    "This is the story of humanity's last hope... behind the walls.  ~ AOT",
+    "This is the story of a boy who sought freedom... but found a war that consumed him. ~AOT",
+    "What does it mean to be free?  ~Eren Yeager"
+  ]
+  const [currentTagline, setCurrentTagline] = useState(taglines[0])
+  
+  
+  
+  useEffect(() => {
+    let start = 0;
+    const end = 100;
+
+    const animate = ()=>{
+      const increment = (end -start)/(2000/16)
+      start += increment
+      setCount(Math.min(Math.floor(start),end))
+
+      start !== end && requestAnimationFrame(animate)
+    }
+    animate()
+
+    let index =0;
+    const changeTaglines = setInterval(()=>{
+      index = (index +1) % taglines.length
+      setCurrentTagline(taglines[index])
+    },1000)
+    
+    // Lock scroll on mount (html and body)
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    console.log('Locked')
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    };
+}, []);
+
+    
+    
   return (
-    <>
-        <div className='fixed -top-7 left-0 h-full w-full cursor-none pointer-events-none bg-black'>
-            <video
-            className='absolute -z-10 h-full w-full object-cover opacity-75'
-            autoPlay loop muted
-            src='./src/assets/loading2.mp4' />
-            {/* <div className='h-screen flex justify-center items-center'>
-                <button className='p-5 rounded-xl opacity-75 hover:opacity-100  font-black bg-[#AB341F] text-white text-2xl uppercase'>Attack on Titans</button>
-            </div> */}
-            <div className="counter fixed -bottom-250 right-10 flex font-bold text-[5vmax] text-white custon-clip">
-                <div className="counter1 relative -top-7">
-                    <div className="num">0</div>
-                    <div className="num offset">1</div>
-                </div>
-                <div className="counter2 relative -top-7">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num">2</div>
-                    <div className="num">3</div>
-                    <div className="num">4</div>
-                    <div className="num">5</div>
-                    <div className="num">6</div>
-                    <div className="num">7</div>
-                    <div className="num">8</div>
-                    <div className="num">9</div>
-                </div>
-                <div className="counter3 relative -top-7">
-                    <div className="num">0</div>
-                    <div className="num">1</div>
-                    <div className="num">2</div>
-                    <div className="num">3</div>
-                    <div className="num">4</div>
-                    <div className="num">5</div>
-                    <div className="num">6</div>
-                    <div className="num">7</div>
-                    <div className="num">8</div>
-                    <div className="num">9</div>
-                </div>
-                <div className="counter4 relative -top-7">
-                    <div>%</div>
-                </div>
-            </div>
-        </div>
-    </>
+    <div className={`transition-opacity duration-1000 ${exit ? "opacity-0" : "opacity-100"} fixed z-999 inset-0 bg-black font-Popings`}>
+      <video 
+        className='absolute inset-0 w-full h-full object-cover'
+        autoPlay 
+        muted 
+        loop
+        src="/loading2.mp4"
+      >
+      </video>
+        <p className='absolute text-[#6b1717] font-black text-[8vmax] bottom-10 right-10'>{count}</p>
+        <p className='absolute w-full text-white top-1/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-black text-[5vmax] leading-none text-center uppercase'>Attack on Titan</p>
+        <i className='absolute w-full text-white top-1/3 pb-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[1.2vmax] font-extralight animate-pulse transition-opacity text-center'>{currentTagline}</i>
+    </div>
   )
 }
 
