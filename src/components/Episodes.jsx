@@ -4,6 +4,7 @@
 import gsap from "gsap"
 import React, { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 
 const Episodes = () => {
@@ -94,7 +95,7 @@ const Episodes = () => {
             ))}
         </div>
         <div ref={viewAll} className='flex justify-center items-center text-white font-bold text-2xl'>
-            <Link to={'/AllEpisodes'} className="uppercase">View All</Link>
+            <Link to={'/AllEpisodes'} className="uppercase">View All <FaLongArrowAltRight className='inline mb-1' /></Link>
             {/* <MdArrowRightAlt /> */}
         </div>
     </div>
