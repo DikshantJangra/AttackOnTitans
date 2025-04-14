@@ -53,7 +53,7 @@ const AttackLanding = () => {
   },[])
   return (
   <>
-    <div className='h-screen w-full bg-[url(/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
+    <div data-scroll data-scroll-speed='-0.05' className='min-h-screen w-full bg-[url(/OGbg.png)] bg-[#CB6734] bg-cover bg-center bg-no-repeat'>
         <div className='Navbar font-black text-white flex justify-center items-center text-[5vmax] py-3'>
             <div className='overflow-hidden'>
               <h1 ref={attackRef} className='uppercase opacity-0 animate-from'>Attack</h1>
